@@ -19,14 +19,13 @@ namespace TestTask2
         public static void Test1()
         {
             Console.WriteLine("Тест1");
-
+            // Потоки для параллельного редактирования
             Thread thr1 = new Thread(() =>
             {
                 for (int i = 0; i < 10; i++)
                     ReadValue(1);
             });
 
-            // Потоки для параллельного чтения
             Thread thr2 = new Thread(() =>
             {
                 Thread.Sleep(10);
@@ -41,7 +40,7 @@ namespace TestTask2
         public static void Test2()
         {
             Console.WriteLine("\n\n\nТест2");
-
+            // Поток для редактирования
             Thread thr1 = new Thread(() =>
             {
                 for (int i = 0; i < 20; i++)
