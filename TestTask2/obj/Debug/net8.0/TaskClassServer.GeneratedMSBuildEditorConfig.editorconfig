@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TaskClassServer
-build_property.ProjectDir = C:\Users\user\Desktop\тестовое\2.1\TestTask2\TestTask2\
+build_property.ProjectDir = C:\Users\user\Desktop\тестовое\2.2\TaskClassServer\TestTask2\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

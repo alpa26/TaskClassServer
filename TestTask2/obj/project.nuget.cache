@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J77NreIsX3u56n1fp/xbBDQQaHdReB+333ZVhwEt+VH/No6IYMi8tlz0CT9rXDVbIIR4/wNOaFfOQcyY1n7WEQ==",
+  "dgSpecHash": "K9fHpSXTL4UEbeDJqoAR5+3rMADZJwwqNbgkFv3A+cRiuXmzE2uwFq7qg2eLSYfZbVyyOTiATjLuvqThuiUyow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\тестовое\\2.1\\TestTask2\\TestTask2\\TaskClassServer.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\тестовое\\2.2\\TaskClassServer\\TestTask2\\TaskClassServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -12,10 +12,17 @@ namespace TestTask2
 
         public static void RunTests()
         {
-            // Поток для записи
+            Test1();
+            Thread.Sleep(5000);
+            Test2();
+        }
+        public static void Test1()
+        {
+            Console.WriteLine("Тест1");
+
             Thread thr1 = new Thread(() =>
             {
-                for (int i = 0; i < 25; i++)
+                for (int i = 0; i < 10; i++)
                     ReadValue(1);
             });
 
@@ -24,16 +31,38 @@ namespace TestTask2
             {
                 Thread.Sleep(10);
 
-                for (int i = 0; i < 25; i++)
+                for (int i = 0; i < 10; i++)
+                    ReadValue(2);
+
+            });
+            thr1.Start();
+            thr2.Start();
+        }
+        public static void Test2()
+        {
+            Console.WriteLine("\n\n\nТест2");
+
+            Thread thr1 = new Thread(() =>
+            {
+                for (int i = 0; i < 20; i++)
+                    ReadValue(1);
+            });
+
+            // Потоки для параллельного чтения
+            Thread thr2 = new Thread(() =>
+            {
+                Thread.Sleep(10);
+
+                for (int i = 0; i < 20; i++)
                     WriteValue(2);
-                
+
             });
 
             Thread thr3 = new Thread(() =>
             {
                 Thread.Sleep(10);
 
-                for (int i = 0; i < 25; i++)
+                for (int i = 0; i < 20; i++)
                     WriteValue(3);
             });
 
@@ -41,7 +70,7 @@ namespace TestTask2
             {
                 Thread.Sleep(10);
 
-                for (int i = 0; i < 25; i++)
+                for (int i = 0; i < 20; i++)
                     WriteValue(3);
             });
 
@@ -49,7 +78,7 @@ namespace TestTask2
             {
                 Thread.Sleep(10);
 
-                for (int i = 0; i < 25; i++)
+                for (int i = 0; i < 20; i++)
                     WriteValue(3);
             });
 
@@ -60,6 +89,7 @@ namespace TestTask2
             thr4.Start();
             thr5.Start();
         }
+
         public static void WriteValue(int thr)
         {
             int c = Server.GetCount();
